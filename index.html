@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bgr.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img-box">
+            <img src="bg-removebg-preview.png" width="600px">
+            <div class="img-wrap">
+                <img src="bg.jpg" id="originalImg">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var imgBox = document.querySelector(".img-box");
+        var imgWrap =document.querySelector(".img-wrap");
+         var originalImg =document.getElementById("originalImg");
+
+originalImg.style.width =imgBox.offsetwidth +"px";
+var leftspace =imgBox.offsetLeft;
+
+imgBox.onmousemove  =function(e){
+    var boxwidth =(e.pageX -leftspace)+"px";
+    imgWrap.style.width =boxwidth;
+
+
+}
+     </script>
+    
+</body>
+</html>
